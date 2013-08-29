@@ -74,6 +74,9 @@ GEM
       railties
     mime-types (1.24)
     multi_json (1.7.9)
+    neat (1.4.0)
+      bourbon (>= 2.1)
+      sass (>= 3.2)
     oauth (0.4.7)
     omniauth (1.1.4)
       hashie (>= 1.2, < 3)
@@ -145,6 +148,7 @@ DEPENDENCIES
   haml-rails
   jquery-rails
   meta_request
+  neat
   oauth
   omniauth
   pg
