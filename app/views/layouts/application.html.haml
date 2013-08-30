@@ -1,9 +1,19 @@
 !!!
 %html
   %head
-    %title Onprem
+    %title OnPrem
     = stylesheet_link_tag    "application", :media => "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
+    %nav
+      .logo
+        %h1 OnPrem Solution Partners
+      %ul
+        %li= link_to "Home", "#"
+        %li= link_to "Our Clients", "#"
+        %li= link_to "Our People", "#"
+        %li= link_to "Our Work", "#"
+        %li= link_to "Careers", "#"
+        %li= link_to "Contact", "#"
     = yield

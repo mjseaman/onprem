@@ -1,0 +1,64 @@
+$white: white;
+$black: black;
+$orange: #FF753E;
+
+
+nav {
+	background-color:rgba(236,236,236,0.5);
+	width:100%;
+	height:50px;
+	box-shadow: 0px 1px 50px #5E5E5E;
+	// position:fixed;
+	top:0px;
+
+	h1 {
+	
+		color:$black;
+		margin:0;
+		margin: 0.2em 0.5em;
+		float:left;
+	}
+
+	ul {
+		margin:0;
+		margin-top: 0.5em;
+		padding: 0.25em;	
+		float: right;
+
+		li {
+			display: inline-block;
+			margin-right: 1em;
+		}
+	}
+
+	a:link {
+		font-size: 1.25em;
+		color: $black;
+		text-decoration: none;
+	}
+	a:visited {
+		color: $black;
+		text-decoration: none;
+	}
+	a:hover {
+		color: $orange;
+		text-decoration: none;
+	}
+	a:active {
+		color: $orange;
+		text-decoration: none;
+	}
+}
+
+div.container {
+	@include outer-container;
+	// background-color: #E8E8E8;
+
+	div.sidebar {
+		@include span-columns(6);
+		@include media($mobile) {
+			@include span-columns(12);
+		}
+	}
+}
+

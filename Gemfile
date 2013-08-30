@@ -30,8 +30,6 @@ group :assets do
   gem 'bourbon'
   gem 'neat'
 
-
-
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
 
@@ -41,23 +39,23 @@ end
 group :development, :test do
   gem 'annotate'
   gem 'meta_request'
-  # gem 'rspec-rails'
-  # gem 'capybara'
+  gem 'rspec-rails'
+  gem 'capybara'
 	# gem 'spork'
-  # gem 'guard-rspec'
-  # gem 'selenium-webdriver'
-  # gem 'factory_girl_rails'
+  gem 'guard-rspec'
+  gem 'selenium-webdriver'
+  gem 'factory_girl_rails'
 	# gem 'faker'
-  # gem 'shoulda-matchers'
-  # gem 'database_cleaner'
-  # gem 'jasmine-rails'
-  # gem 'simplecov', require: false
-  # gem 'dotenv-rails' # Dot env, saves keys in the environment
+  gem 'shoulda-matchers'
+  gem 'database_cleaner'
+  gem 'jasmine-rails'
+  gem 'simplecov', require: false
+  gem 'dotenv-rails' # Dot env, saves keys in the environment
 end
 
 gem 'jquery-rails'
-# gem 'jquery-ui-rails'
-# gem 'underscore-rails'
+gem 'jquery-ui-rails'
+gem 'underscore-rails'
 gem 'debugger'
 
 # gem 'ransack'
