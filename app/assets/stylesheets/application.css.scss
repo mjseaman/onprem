@@ -10,7 +10,9 @@
  *
  */
 
-@import "bourbon";
-@import "grid-settings";
-@import "neat";
+// External files
+@import "compass"
+@import "sassy-buttons";
+
+// My files
 @import "layout";

@@ -27,8 +27,9 @@ gem 'awesome_print'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'haml-rails'
-  gem 'bourbon'
-  gem 'neat'
+  gem 'compass-rails'
+  gem 'susy'
+  gem 'sassy-buttons'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby

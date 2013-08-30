@@ -50,15 +50,15 @@ nav {
 	}
 }
 
-div.container {
-	@include outer-container;
-	// background-color: #E8E8E8;
+// div.container {
+// 	@include outer-container;
+// 	// background-color: #E8E8E8;
 
-	div.sidebar {
-		@include span-columns(6);
-		@include media($mobile) {
-			@include span-columns(12);
-		}
-	}
-}
+// 	div.sidebar {
+// 		@include span-columns(6);
+// 		@include media($mobile) {
+// 			@include span-columns(12);
+// 		}
+// 	}
+// }
 
