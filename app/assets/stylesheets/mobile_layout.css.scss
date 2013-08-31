@@ -1,0 +1,124 @@
+$total-columns  : 12;
+$column-width   : 4em;
+$gutter-width   : 1em;
+$grid-padding   : $gutter-width;
+$break 					: 12;
+
+$default-border-radius: 3px;
+
+$dark-blue 			: #05386b;
+$light-blue			: #3885bf;
+$white					: white;
+$frosty-white		: rgba(255,255,255,0.9);
+$black					: black;
+$transparent		: rgba(0,0,0,0.2);
+
+
+// Mobile Layout
+.banner {
+	width: 100%;
+	@include background-image(image-url("milkyway.jpg"), linear-gradient(top, #3885bf, #05386b));
+	background-position: center;
+	background-size: cover;
+	height: 20em;
+	@include border-radius;
+
+	.logo {
+		float: left;
+		margin-left: 1em;
+		background-color: $frosty-white;
+		height:4em;
+		width: 10em;
+		@include background-image(image-url("onprem.png"));
+		background-position: center;
+		background-size: cover;
+		@include border-bottom-left-radius;
+		@include border-bottom-right-radius;
+	}
+}
+
+.pagenav { 
+	@include span-columns(12,$break);
+	max-width:40%;
+	background-color: $white;
+	float:right;
+	@include border-bottom-left-radius;
+	@include border-bottom-right-radius;
+	margin: 0 1em;
+
+	ul {
+		text-align: center;
+		padding:0;
+		margin:0;
+		li {
+			display: block;
+			padding: 0.5em 1em;
+			border-bottom: 1px solid $transparent;
+			margin: 0;
+			list-style-type: none;
+  		a {
+  			text-decoration: none;
+  			font-family: $blueprint-font-family;
+  			font-weight: bold;
+  			color: $black;
+  			font-size: 1em;
+  		}
+  		a:visited {
+  			color: $black;
+  		}
+  		a:hover {
+  			color: $light-blue;
+  		}
+  		a:active {
+  			color: $light-blue;
+  		}
+		}
+		li:last-child {
+			border-bottom: none;
+		}
+	}
+}
+
+.page { 
+	@include container($total-columns, $break);
+	@include susy-grid-background;
+	@include blueprint-typography(true);
+	.main { 
+	}
+}
+
+.contentinfo {
+	margin: 0 0 - $grid-padding;
+	padding: 0 $grid-padding;
+	@include at-breakpoint($break) {
+		clear: both;
+		margin: 0;
+		@include pad(3,3,$break);
+	}
+}
+
+// Large Screen
+@include at-breakpoint($break) {
+	.pagenav {
+		max-width: 100%;
+		width: auto;
+		ul {
+			li {
+				border-bottom: none;
+				display: inline-block;
+
+			}
+		}
+	}
+	.page {
+		.main { 
+			$main-columns: 12;
+			@include span-columns($main-columns omega, $break);
+			.content { @include span-columns(9,$main-columns); }
+			.summary { @include span-columns(3 omega, $main-columns); }
+		}
+	}
+}
+
+
+

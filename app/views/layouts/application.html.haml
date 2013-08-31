@@ -6,14 +6,18 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    %nav
+    .banner
       .logo
-        %h1 OnPrem Solution Partners
-      %ul
-        %li= link_to "Home", "#"
-        %li= link_to "Our Clients", "#"
-        %li= link_to "Our People", "#"
-        %li= link_to "Our Work", "#"
-        %li= link_to "Careers", "#"
-        %li= link_to "Contact", "#"
-    = yield
+      .pagenav
+        %ul
+          %li= link_to "Home", "#"
+          %li= link_to "Our Clients", "#"
+          %li= link_to "Our People", "#"
+          %li= link_to "Our Work", "#"
+          %li= link_to "Careers", "#"
+          %li= link_to "Contact", "#"
+    .page
+      .main
+        = yield
+      .contentinfo
+        %p &copy OnPrem Solution Partners 2013
